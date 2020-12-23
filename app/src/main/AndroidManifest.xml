@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.italianswapp.tipcounter">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logo"
+        android:supportsRtl="true"
+        android:name=".Utilities.App"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-8919261416525349~3698501464" />
+
+        <activity android:name=".MainActivity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".AddTipActivity"
+            android:parentActivityName=".MainActivity.MainActivity" />
+
+        <activity
+            android:name=".DetailsActivity"
+            android:parentActivityName=".StatisticsActivity"/>
+        <activity
+            android:name=".StatisticsActivity"
+            android:parentActivityName=".MainActivity.MainActivity"/>
+    </application>
+
+</manifest>

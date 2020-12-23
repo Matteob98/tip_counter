@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundTint"
+    tools:context=".StatisticsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarStatisticsActivity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:theme="@style/ToolBarStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:layout_marginBottom="10dp"
+        android:background="@color/backgroundTint"
+        app:layout_constraintTop_toBottomOf="@id/toolbarStatisticsActivity"
+        app:layout_constraintBottom_toTopOf="@id/adViewStatisticsActivity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:scrollbars="vertical">
+
+            <TextView
+                android:id="@+id/textViewY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStatDate"
+                android:text="@string/Yesterday"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2Y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStatStandard"
+                android:text="@string/Tips_received"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textViewY"
+                app:layout_constraintEnd_toStartOf="@+id/totalTipYesterdayTextViewStatisticsActivity" />
+
+            <TextView
+                android:id="@+id/totalTipYesterdayTextViewStatisticsActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="2"
+                style="@style/TextViewStatNumbers"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView2Y"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/yesterdayEarnTextViewStatisticsActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="6,50€"
+                style="@style/TextViewStatEarn"
+                app:layout_constraintStart_toStartOf="@+id/textViewY"
+                app:layout_constraintTop_toBottomOf="@+id/textViewY" />
+
+            <Button
+                android:id="@+id/yesterdayDetailsButtonStatisticsActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                style="@style/ButtonBorder.Border"
+                android:text="@string/Show_details"
+                android:onClick="detailsButtonClick"
+                app:layout_constraintEnd_toEndOf="@+id/lastMonthDetailsButtonStatisticsActivity"
+                app:layout_constraintStart_toStartOf="@+id/lastMonthDetailsButtonStatisticsActivity"
+                app:layout_constraintTop_toBottomOf="@+id/yesterdayEarnTextViewStatisticsActivity" />
+
+            <View
+                android:id="@+id/view3Y"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/yesterdayDetailsButtonStatisticsActivity" />
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStatDate"
+                android:text="@string/Last_week"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view3Y" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStatStandard"
+                android:text="@string/Tips_received"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView"
+                app:layout_constraintEnd_toStartOf="@+id/totalTipLastWeekTextViewStatisticsActivity" />
+
+            <TextView
+                android:id="@+id/totalTipLastWeekTextViewStatisticsActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStatNumbers"
+                tools:text="5"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/daysWorkedLastWeekTextViewStatisticsActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStatNumbers"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/totalTipLastWeekTextViewStatisticsActivity"
+                tools:text="3" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStatStandard"
+                android:text="@string/Days_worked"
+                app:layout_constraintEnd_toStartOf="@+id/daysWorkedLastWeekTextViewStatisticsActivity"
+                app:layout_constraintTop_toTopOf="@+id/daysWorkedLastWeekTextViewStatisticsActivity" />
+
+            <TextView
+                android:id="@+id/lastWeekEarnTextViewStatisticsActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStatEarn"
+                tools:text="26,50€"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <Button
+                android:id="@+id/lastWeekDetailsButtonStatisticsActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                style="@style/ButtonBorder.Border"
+                android:text="@string/Show_details"
+                android:onClick="detailsButtonClick"
+                app:layout_constraintEnd_toEndOf="@+id/lastMonthDetailsButtonStatisticsActivity"
+                app:layout_constraintStart_toStartOf="@+id/lastMonthDetailsButtonStatisticsActivity"
+                app:layout_constraintTop_toBottomOf="@+id/lastWeekEarnTextViewStatisticsActivity" />
+
+            <!-- Last month -->
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lastWeekDetailsButtonStatisticsActivity" />
+
+            <TextView
+                android:id="@+id/textView13"
+                style="@style/TextViewStatDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Last_month"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/lastMonthEarnTextViewStatisticsActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStatEarn"
+                tools:text="100,5€"
+                app:layout_constraintStart_toStartOf="@+id/textView13"
+                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStatStandard"
+                android:text="@string/Tips_received"
+                app:layout_constraintEnd_toStartOf="@+id/totalTipLastMonthTextViewStatisticsActivity"
+                app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+            <TextView
+                android:id="@+id/totalTipLastMonthTextViewStatisticsActivity"
+                style="@style/TextViewStatNumbers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView16"
+                tools:text="53" />
+
+            <TextView
+                android:id="@+id/daysWorkedLastMonthTextViewStatisticsActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStatNumbers"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/totalTipLastMonthTextViewStatisticsActivity"
+                tools:text="21" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStatStandard"
+                android:text="@string/Days_worked"
+                app:layout_constraintBaseline_toBaselineOf="@+id/daysWorkedLastMonthTextViewStatisticsActivity"
+                app:layout_constraintEnd_toStartOf="@+id/daysWorkedLastMonthTextViewStatisticsActivity" />
+
+            <Button
+                android:id="@+id/lastMonthDetailsButtonStatisticsActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                style="@style/ButtonBorder.Border"
+                android:text="@string/Show_details"
+                android:onClick="detailsButtonClick"
+                app:layout_constraintEnd_toEndOf="@+id/lastYearDetailsButtonStatisticsActivity"
+                app:layout_constraintStart_toStartOf="@+id/lastYearDetailsButtonStatisticsActivity"
+                app:layout_constraintTop_toBottomOf="@+id/lastMonthEarnTextViewStatisticsActivity" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lastMonthDetailsButtonStatisticsActivity" />
+
+            <TextView
+                android:id="@+id/textView20"
+                style="@style/TextViewStatDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Last_year"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+            <TextView
+                android:id="@+id/lastYearEarnTextViewStatisticsActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStatEarn"
+                tools:text="412,37€"
+                app:layout_constraintStart_toStartOf="@+id/textView20"
+                app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStatStandard"
+                android:text="@string/Tips_received"
+                app:layout_constraintEnd_toStartOf="@+id/totalTipLastYearTextViewStatisticsActivity"
+                app:layout_constraintTop_toTopOf="@+id/textView20" />
+
+            <TextView
+                android:id="@+id/totalTipLastYearTextViewStatisticsActivity"
+                style="@style/TextViewStatNumbers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView22"
+                tools:text="210" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextViewStatStandard"
+                android:text="@string/Days_worked"
+                app:layout_constraintEnd_toStartOf="@+id/daysWorkedLastYearTextViewStatisticsActivity"
+                app:layout_constraintTop_toTopOf="@+id/daysWorkedLastYearTextViewStatisticsActivity" />
+
+            <TextView
+                android:id="@+id/daysWorkedLastYearTextViewStatisticsActivity"
+                style="@style/TextViewStatNumbers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/totalTipLastYearTextViewStatisticsActivity"
+                tools:text="302" />
+
+            <Button
+                android:id="@+id/lastYearDetailsButtonStatisticsActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                style="@style/ButtonBorder.Border"
+                android:text="@string/Show_details"
+                android:onClick="detailsButtonClick"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lastYearEarnTextViewStatisticsActivity" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adViewStatisticsActivity"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="6dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-8919261416525349/7063031409"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

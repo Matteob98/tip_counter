@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Conta mance</string>
+    <string name="New_Tip">Nuova Mancia</string>
+    <string name="toolbar_title">Conta mance</string>
+    <string name="This_week">Questa settimana</string>
+    <string name="This_month">Questo mese</string>
+    <string name="This_year">Questo anno</string>
+    <string name="Statistics">Statistiche</string>
+    <string name="Details">Dettagli</string>
+    <string name="tip_canceled">mancia cancellata</string>
+    <string name="Cancel">Cancella</string>
+    <string name="Tip_canceled">Mancia cancellata</string>
+    <string name="Yesterday">Ieri</string>
+    <string name="Week">Settimana</string>
+    <string name="Month">Mese</string>
+    <string name="Year">Anno</string>
+    <string name="Tips_received">Mance ricevute</string>
+    <string name="Add_note">Aggiungi nota</string>
+    <string name="empty_tip">Impossibile aggiungere una mancia vuota</string>
+    <string name="Show_details">Mostra dettagli</string>
+    <string name="Last_week">Ultima settimana</string>
+    <string name="Days_worked">Giorni lavorati</string>
+    <string name="Last_month">Ultimo mese</string>
+    <string name="Last_year">Ultimo anno</string>
+</resources>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Tip Counter</string>
+    <string name="New_Tip">New Tip</string>
+    <string name="toolbar_title">Tip Counter</string>
+    <string name="This_week">This week</string>
+    <string name="This_month">This month</string>
+    <string name="This_year">This year</string>
+    <string name="Statistics">Statistics</string>
+    <string name="Details">Details</string>
+    <string name="tip_canceled">tip canceled</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Tip_canceled">Tip canceled</string>
+    <string name="Yesterday">Yesterday</string>
+    <string name="Week">Week</string>
+    <string name="Month">Month</string>
+    <string name="Year">Year</string>
+    <string name="Tips_received">Tips received</string>
+    <string name="Add_note">Add note</string>
+    <string name="empty_tip">Impossible to add an empty tip</string>
+    <string name="Show_details">Show details</string>
+    <string name="Last_week">Last week</string>
+    <string name="Days_worked">Days worked</string>
+    <string name="Last_month">Last month</string>
+    <string name="Last_year">Last year</string>
+</resources>
